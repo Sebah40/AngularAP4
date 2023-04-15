@@ -1,0 +1,39 @@
+.image-with-text img {
+    float: right;
+    margin: 10px;
+    border-radius: 50%;
+    margin-left: auto;
+    width: 40%;
+  }
+  .image-with-text {
+    color: greenyellow;
+    font-family: "Open Sans", sans-serif;
+    margin: 20px;
+    text-align: center;
+    }
+
+  
+@media screen and (max-width: 480px) {
+    .image-with-text img{
+        font-family: "Open Sans", sans-serif;
+        margin-top: 50px;
+        display: -webkit-box;
+        border-radius: 50%;
+        margin-left: auto;
+        width: 50%;
+         margin-left: auto;
+    }
+}
+@media screen and (min-width: 768px) {
+    .image-with-text {
+      margin-left: 100px;
+    }
+    .image-with-text {
+        color: greenyellow;
+        font-family: "Open Sans", sans-serif;
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        text-align: center;
+      }
+  }
