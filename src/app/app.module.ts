@@ -10,12 +10,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MainComponent } from './main/main.component';
 import { MatCardModule } from '@angular/material/card';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
+    EducationComponent,
   ],
   imports: [
     BrowserModule,
