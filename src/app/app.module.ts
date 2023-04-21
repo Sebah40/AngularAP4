@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MainComponent } from './main/main.component';
 import { MatCardModule } from '@angular/material/card';
 import { EducationComponent } from './education/education.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { EducationComponent } from './education/education.component';
     HeaderComponent,
     MainComponent,
     EducationComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

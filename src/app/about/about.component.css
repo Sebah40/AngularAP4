@@ -1,0 +1,18 @@
+#about {
+    background-color: rgb(66,66,66);
+    padding: 30px 0;
+    text-align: center;
+    color:#FCBE11;
+  }
+
+  #about h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  p{
+    text-align: left;
+    margin-left: 10px;
+    color:#6cf788;
+  }

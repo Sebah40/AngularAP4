@@ -3,7 +3,7 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: aliceblue;
+  background-color: rgb(66,66,66);
 }
 
 .container {
@@ -18,18 +18,21 @@ body {
 .main-card {
   margin-left: 10%;
   margin-right: 10%;
+  background-color: rgb(88,88,88);
 }
 
 .secondary-card{
   float: left;
   width: 30%;
   margin-right: 10px;
+  background-color: rgb(88,88,88);
 }
 
 .tertiary-card{
   float: right;
   width: 30%;
   margin-left: 10px;
+  background-color: rgb(88,88,88);
 }
 
 img {
