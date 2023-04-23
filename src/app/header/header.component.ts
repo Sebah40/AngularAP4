@@ -17,5 +17,4 @@ export class HeaderComponent implements OnInit {
   toggleMenu() {
     this.showMenu = !this.showMenu;
   }
-
 }

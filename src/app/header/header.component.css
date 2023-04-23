@@ -2,16 +2,13 @@ header{
     background:rgb(0, 0, 0);
     padding:0;
 }
-button{
+a, button{
     display:block;
     padding:1rem 2rem;
     margin-top:.5rem;
     border-radius:6px;
     cursor:pointer;
   }
-a{
-    color: rgb(175, 175, 175);
-}
 
 a:hover{
     color:rgb(110, 88, 224);
