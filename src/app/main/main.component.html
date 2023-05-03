@@ -1,5 +1,14 @@
 <body>
-    <div class="container">
+  <style>
+    body {
+      background-image: url('../../assets/img/main-background.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: right;
+    }
+    </style>
+  
+  <div class="container">
         <mat-card class="secondary-card">
             <mat-card-header>
                 <a href="https://github.com/Sebah40/AngularAP4"><img src="../../assets/img/GitHub.png"></a>
@@ -15,7 +24,7 @@
                 <a href="../../assets/Currículum.pdf" download><img src="../../assets/img/Curriculum.png"></a>
             </mat-card-header>
             <mat-card-content>
-              <h1>Hello, I am Sebastián</h1>
+              <h1>Hello, I am {{persona.nombre}}</h1>
               <h3>Full-Stack Developer</h3>
             </mat-card-content>
           </mat-card>
