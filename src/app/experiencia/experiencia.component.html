@@ -1,0 +1,16 @@
+&nbsp;
+<section id="skills">
+    <h2>Work experience</h2>
+    <button mat-button routerLink="/nuevaExp" *ngIf="isLogged">Add experience</button>
+    <tr *ngFor="let Experiencia of expe">
+        <mat-card class="skill-card">
+            <div class="skills-block">
+                <button mat-button routerLink="/update/{{Experiencia.id}}" *ngIf="isLogged">Edit experience</button>
+                <h3>{{Experiencia.nombreE}}</h3>
+                <p><strong>{{Experiencia.descripcionE}}</strong></p>
+                <button mat-button (click)="delete(Experiencia.id)" *ngIf="isLogged">Delete experience</button>
+            </div>
+        </mat-card>
+    </tr>
+</section>
+&nbsp;

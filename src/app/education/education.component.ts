@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { educacion } from '../model/educacion.model';
+import { Educacion } from '../model/educacion';
 import { EducacionService } from '../service/educacion.service';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-education',
@@ -8,10 +9,34 @@ import { EducacionService } from '../service/educacion.service';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent implements OnInit {
-  educacion: educacion = new educacion("","","","","");
-  constructor(public educacionService: EducacionService) {}
+  educacion: Educacion[] = [];
+
+  constructor(private educacionS : EducacionService, private tokenService: TokenService) {}
+  isLogged = false;
 
   ngOnInit(): void {
-    this.educacionService.getEducacion().subscribe((data: educacion) => {this.educacion = data});
+    this.cargarEducacion();
+    if(this.tokenService.getToken()) {
+      this.isLogged = true;
+  } else {
+    this.isLogged = false;
   }
+  }
+  cargarEducacion(): void {
+    this.educacionS.lista().subscribe(
+      data => {
+        this.educacion = data;
+      }
+    )
+  }
+
+  delete(id?: number){
+    if( id != undefined ) {
+      this.educacionS.delete(id).subscribe(
+        data => {
+          this.cargarEducacion();
+        }, err => alert("Could not delete")
+      )
+  }
+}
 }

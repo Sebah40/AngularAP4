@@ -1,17 +1,32 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { educacion } from '../model/educacion.model';
+import { Injectable } from '@angular/core';
+import { Educacion } from '../model/educacion';
 import { Observable } from 'rxjs';
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'http://192.168.1.13:8080/educacion/';
+  URL = 'http://localhost:8080/educacion';
+  constructor(private httpClient : HttpClient) { }
 
-  constructor(private http: HttpClient) { }
-    public getEducacion() : Observable<educacion>{
-      return this.http.get<educacion>(this.URL+'traer/perfil');
-    }
+  public lista(): Observable<Educacion[]> {
+   return this.httpClient.get<Educacion[]>(this.URL + 'lista'); 
+  }
+
+  public details(id: number): Observable<Educacion> {
+    return this.httpClient.get<Educacion>(this.URL + `detail/${id}`);
+  }
+
+  public save(educacion : Educacion): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', educacion);
+  }
+
+  public update(id: number, educacion: Educacion): Observable<any> {
+    return this.httpClient.put<any>(this.URL + `update/${id}`, educacion);
+  }
+
+  public delete(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  }
 }
