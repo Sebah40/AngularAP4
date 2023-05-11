@@ -37,3 +37,21 @@
       </div>
     </div>
   </section>
+
+  &nbsp;
+    <h2>Education</h2>
+    <button mat-button routerLink="/nuevaedu" *ngIf="isLogged">Add education</button>
+    <tr *ngFor="let Educacion of educacion">
+        <mat-card class="skill-card">
+            <div class="skills-block">
+                <button mat-button routerLink="/editEdu/{{Educacion.id}}" *ngIf="isLogged">Edit education</button>
+                <h3>{{Educacion.nombre}}</h3>
+                <p><strong>{{Educacion.descripcion}}</strong></p>
+                <p><strong>{{Educacion.habilidades}}</strong></p>
+                <p><strong>{{Educacion.anio}}</strong></p>
+                <img src="{{Educacion.img}}" height="50">
+                <button mat-button (click)="delete(Educacion.id)" *ngIf="isLogged">Delete education</button>
+            </div>
+        </mat-card>
+    </tr>
+&nbsp;

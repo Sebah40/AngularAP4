@@ -1,0 +1,30 @@
+<div class="container" *ngIf="educacion">
+    <div class="row">
+        <div class="div">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Name</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="educacion.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">abilities</label>
+                    <input type="text" class="form-control" id="habilidades" name="habilidades" [(ngModel)]="educacion.habilidades" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">year</label>
+                    <input type="text" class="form-control" id="anio" name="anio" [(ngModel)]="educacion.anio" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Description</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="educacion.descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">image</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="educacion.img" required>
+                </div>
+            
+            <button mat-button>Edit education</button>
+        </form>
+        </div>
+    </div>
+</div>
