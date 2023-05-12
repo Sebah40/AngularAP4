@@ -1,57 +1,20 @@
+<div class="container" style="--background-image: url('https://i.pinimg.com/originals/4d/3a/8c/4d3a8ca3867ddbcde41a94655be3b415.jpg');">
 <section id="education">
-    <div class="container">
-      <h2>Education</h2>
-      <div class="row">
-        <mat-card class="education-mat">
-        <div class="col-md-6">
-          <div class="education-block">
-            <img src="../../assets/img/UNER.jpg" height="90">
-            <h3>Bachelors in Systems student</h3>
-            <p><strong>Universidad de Entre Ríos</strong> - 2020 - present</p>
-            <p>Java OOP, Python Computer Architecture, Operative Systems, Algorithms.</p>
-          </div>
-        </div>
-    </mat-card>
-    &nbsp;
-    <mat-card class="education-mat">
-        <div class="col-md-6">
-          <div class="education-block">
-            <img src="../../assets/img/Logo header.png">
-            <h3>Full-stack Developer</h3>
-            <p><strong>Argentina Programa 4.0</strong> - May 2023</p>
-            <p>HTML, CSS, JS, Angular, Java, DevOps, Databases, FrontEnd, BackEnd</p>
-          </div>
-        </div>
-    </mat-card>
-    &nbsp;
-    <mat-card class="education-mat">
-        <div class="col-md-6">
-          <div class="education-block">
-            <img src="../../assets/img/Datacamp.png" height="50">
-            <h3>SQL Fundamentals Track</h3>
-            <p><strong>Datacamp</strong> - 2022</p>
-            <p>MySQL, PostgreSQL</p>
-          </div>
-        </div>
-    </mat-card>
-      </div>
-    </div>
-  </section>
-
   &nbsp;
     <h2>Education</h2>
     <button mat-button routerLink="/nuevaedu" *ngIf="isLogged">Add education</button>
     <tr *ngFor="let Educacion of educacion">
-        <mat-card class="skill-card">
-            <div class="skills-block">
+      <mat-card class="education-mat">          <div class="education-block">
                 <button mat-button routerLink="/editEdu/{{Educacion.id}}" *ngIf="isLogged">Edit education</button>
-                <h3>{{Educacion.nombre}}</h3>
-                <p><strong>{{Educacion.descripcion}}</strong></p>
-                <p><strong>{{Educacion.habilidades}}</strong></p>
-                <p><strong>{{Educacion.anio}}</strong></p>
-                <img src="{{Educacion.img}}" height="50">
+                <img src="{{Educacion.img}}" height="90">
+                <strong><h3>{{Educacion.nombre}}</h3></strong>
+                <p><strong>{{Educacion.descripcion}}</strong></p> {{Educacion.anio}}
+                <p>{{Educacion.habilidades}}</p>
                 <button mat-button (click)="delete(Educacion.id)" *ngIf="isLogged">Delete education</button>
             </div>
         </mat-card>
     </tr>
 &nbsp;
+
+</section>
+</div>

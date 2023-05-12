@@ -1,5 +1,10 @@
+.container {
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-position: right;
+}
+
 #education {
-    background-color: rgb(66,66,66);
     padding: 30px 0;
     text-align: center;
     color:#FCBE11;
@@ -11,7 +16,14 @@
   margin-right: auto;
   margin-top: 2%;
   }
-
+  tr {
+    margin: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
   .education-mat {
     margin: 30px;
     margin-left: 20%;

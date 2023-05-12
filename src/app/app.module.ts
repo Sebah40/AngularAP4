@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -24,6 +23,11 @@ import { NewExperienciaComponent } from './experiencia/new-experiencia.component
 import { EditExperienciaComponent } from './experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './education/neweducacion.component';
 import { EditeducacionComponent } from './education/editeducacion.component';
+import { EditSkillComponent } from './skills/edit-skill.component';
+import { NewSkillComponent } from './skills/new-skill.component';
+import {MatProgressSpinnerModule, MatSpinner} from '@angular/material/progress-spinner';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,18 +43,20 @@ import { EditeducacionComponent } from './education/editeducacion.component';
     EditExperienciaComponent,
     NeweducacionComponent,
     EditeducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatProgressBarModule,
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     interceptorProvider
