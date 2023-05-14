@@ -1,17 +1,14 @@
 &nbsp;
 <section id="skills">
-    <h2>Skills</h2>
-    <mat-card class="skill-card">
-        <h3>Java</h3>
+    <h2>Skills
+        <button mat-button routerLink="/newskill" *ngIf="isLogged">New skill</button>
+    </h2>
+        <mat-card class="skill-card" *ngFor="let skill of skill">
+        <h3>{{skill.nombre}}</h3>
         <div class="spinner-container">
-            <mat-spinner mode="determinate" value="{{scrollVariable}}" color="accent" strokeWidth="10"></mat-spinner>
+            <mat-spinner mode="determinate" value={{skill.porcentaje}} color="accent" strokeWidth="10"></mat-spinner>
         </div>
-    </mat-card>
-    <mat-card class="skill-card">
-        <h3>ASDASDA</h3>
-        <div class="spinner-container">
-            <mat-spinner mode="determinate" value="{{scrollVariable}}" color="accent" strokeWidth="10"></mat-spinner>
-        </div>
+        <button mat-button (click)="delete(skill.id)" *ngIf="isLogged">Delete skill</button>        
     </mat-card>
 </section>
 &nbsp;

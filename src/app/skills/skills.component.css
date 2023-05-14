@@ -1,31 +1,51 @@
 #skills {
-    background-color: rgb(66,66,66);
-    padding: 30px 0;
-    text-align: center;
-    color:#FCBE11;
-  }
+  background-color: rgb(66, 66, 66);
+  padding: 30px 0;
+  text-align: center;
+  color: #FCBE11;
+}
 
 
 .skill-card {
-    margin: 3px;
-    width: 10%;
-    height: 10%;
-    display: block;
-    margin-left: 45%;
-    margin-right: 45%;
-    background-color: rgb(88,88,88);
-  }
-  .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10pt;
-  }
-  
-  h3 {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 50px;
-    color: #6cf788;
-  }
+  margin-left: 45%;
+  margin-right: 45%;
+  background-color: rgb(88, 88, 88);
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+h3 {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 50px;
+  color: #6cf788;
+}
+
+
+#skills h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.skill-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.mat-spinner {
+  width: 50px;
+  height: 50px;
+}
