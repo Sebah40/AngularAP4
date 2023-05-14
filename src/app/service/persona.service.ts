@@ -15,4 +15,8 @@ URL = 'http://localhost:8080/personas/';
   public getPersona() : Observable<persona>{
     return this.http.get<persona>(this.URL+'detail/1');
   }
+
+  public update(person: persona): Observable<any>{
+    return this.http.put<any>(this.URL + `update/1`, person);
+  }
 }

@@ -1,0 +1,13 @@
+<div class="container" *ngIf="person">
+    <div class="row">
+        <div class="div">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreE">background image</label>
+                    <input type="text" class="form-control" id="image" name="image" [(ngModel)]="person.img" required>
+                </div>
+            <button mat-button>Edit image</button>
+        </form>
+        </div>
+    </div>
+</div>
