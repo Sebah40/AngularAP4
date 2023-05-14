@@ -28,6 +28,9 @@ import { NewSkillComponent } from './skills/new-skill.component';
 import {MatProgressSpinnerModule, MatSpinner} from '@angular/material/progress-spinner';
 import { EditAboutComponent } from './about/edit-about.component';
 import { EditMainComponent } from './main/edit-main.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { NewprojectsComponent } from './projects/newprojects.component';
+import { EditprojectsComponent } from './projects/editprojects.component';
 
 
 @NgModule({
@@ -49,6 +52,9 @@ import { EditMainComponent } from './main/edit-main.component';
     NewSkillComponent,
     EditAboutComponent,
     EditMainComponent,
+    ProjectsComponent,
+    NewprojectsComponent,
+    EditprojectsComponent,
   ],
   imports: [
     BrowserModule,
