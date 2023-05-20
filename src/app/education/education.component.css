@@ -1,7 +1,5 @@
 .container {
-  background-image: var(--background-image);
-  background-attachment: fixed;
-  background-position: right;
+  background-color: rgb(66,66,66);
 }
 
 #education {
