@@ -83,7 +83,6 @@
       img {
         display: block;
         margin-top: 2%;
-        max-width: 99%;
-        max-height: 99%;
+        max-width: 300px;
       }
     }
