@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "yoprogramosh2023"
+  },
+  "targets": {
+    "yoprogramosh2023": {
+      "hosting": {
+        "Angular": [
+          "yoprogramosh2023"
+        ]
+      }
+    }
   }
 }

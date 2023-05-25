@@ -31,6 +31,9 @@ import { EditMainComponent } from './main/edit-main.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NewprojectsComponent } from './projects/newprojects.component';
 import { EditprojectsComponent } from './projects/editprojects.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -66,7 +69,9 @@ import { EditprojectsComponent } from './projects/editprojects.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider
