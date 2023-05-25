@@ -3,14 +3,14 @@
         <div class="div">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreE">background image</label>
+                    <label for="nombreE">background image change test</label>
                     <input type="file" (change)="uploadImage($event)" class="form-control" id="image" name="image" required>
                 </div>
             <button mat-button>Edit image</button>
         </form>
         </div>
     </div>
-    <div class="image">
-        <img [src]="image" width="200">
+    <div class="images">
+        <img [src]="last"*ngFor="let image of images; let last = last;" width="200">
       </div>
 </div>

@@ -11,35 +11,42 @@ import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fir
 })
 export class EditMainComponent implements OnInit {
   person: persona = null;
-  image: string = "";
+  images: string[];
   constructor(private personaS: PersonaService, private activatedRouter: ActivatedRoute, private router: Router, private storage: Storage) {
   }
 
-  uploadImage($event:any){
+  uploadImage($event: any) {
     const file = $event.target.files[0];
     console.log(file);
-    const imgRef = ref(this.storage, `image/${file.name}`)
+
+    const imgRef = ref(this.storage, `images/${file.name}`);
+
     uploadBytes(imgRef, file)
-    .then(response => console.log(response))
-    .catch(error => console.log(error));
+      .then(response => {
+        console.log(response)
+        this.getImages();
+      })
+      .catch(error => console.log(error));
+
   }
 
-  getImage() {
-    const imageRef = ref(this.storage, 'image');
+  getImages() {
+    const imagesRef = ref(this.storage, 'images');
 
-    listAll(imageRef)
+    listAll(imagesRef)
       .then(async response => {
         console.log(response);
-        this.image = "";
+        this.images = [];
         for (let item of response.items) {
           const url = await getDownloadURL(item);
-          this.image = url;
+          this.images.push(url);
         }
       })
       .catch(error => console.log(error));
   }
+
   ngOnInit(): void {
-    this.getImage();
+    this.getImages();
     const id = this.activatedRouter.snapshot.params['id'];
     this.personaS.getPersona().subscribe(data => {
     this.person = data;
