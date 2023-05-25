@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { persona } from '../model/persona.model';
 import { PersonaService } from '../service/persona.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-edit-main',
@@ -11,42 +10,10 @@ import { Storage, ref, uploadBytes, listAll, getDownloadURL } from '@angular/fir
 })
 export class EditMainComponent implements OnInit {
   person: persona = null;
-  images: string[];
-  constructor(private personaS: PersonaService, private activatedRouter: ActivatedRoute, private router: Router, private storage: Storage) {
-  }
 
-  uploadImage($event: any) {
-    const file = $event.target.files[0];
-    console.log(file);
-
-    const imgRef = ref(this.storage, `images/${file.name}`);
-
-    uploadBytes(imgRef, file)
-      .then(response => {
-        console.log(response)
-        this.getImages();
-      })
-      .catch(error => console.log(error));
-
-  }
-
-  getImages() {
-    const imagesRef = ref(this.storage, 'images');
-
-    listAll(imagesRef)
-      .then(async response => {
-        console.log(response);
-        this.images = [];
-        for (let item of response.items) {
-          const url = await getDownloadURL(item);
-          this.images.push(url);
-        }
-      })
-      .catch(error => console.log(error));
-  }
-
+  constructor(private personaS: PersonaService, private activatedRouter: ActivatedRoute, private router: Router) {}
+  
   ngOnInit(): void {
-    this.getImages();
     const id = this.activatedRouter.snapshot.params['id'];
     this.personaS.getPersona().subscribe(data => {
     this.person = data;
