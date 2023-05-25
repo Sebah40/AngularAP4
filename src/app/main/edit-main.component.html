@@ -12,10 +12,7 @@
     </div>
     <div class="images">
         <li *ngFor="let image of images; let last = last;">
-            <img [src]="image" width="200">
-            <div *ngIf="last">
-                <img [src]="last" width="200">
-             </div>
+            <img [src]="image" *ngIf="last" width="200">
         </li>
       </div>
 </div>
