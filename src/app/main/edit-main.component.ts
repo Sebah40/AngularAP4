@@ -25,9 +25,9 @@ export class EditMainComponent implements OnInit {
   }
 
   getImage() {
-    const imagesRef = ref(this.storage, 'images');
+    const imageRef = ref(this.storage, 'image');
 
-    listAll(imagesRef)
+    listAll(imageRef)
       .then(async response => {
         console.log(response);
         this.image = "";
