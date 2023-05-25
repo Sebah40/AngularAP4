@@ -13,6 +13,9 @@
     <div class="images">
         <li *ngFor="let image of images; let last = last;">
             <img [src]="image" *ngIf="last" width="200">
+            <div *ngIf="last">
+                <img [src]="image" width="200">
+             </div>
         </li>
       </div>
 </div>
