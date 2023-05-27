@@ -1,0 +1,17 @@
+&nbsp;
+<div class="wrapper">
+<section id="Contact">
+    <h2>Messages</h2>
+    <button mat-button routerLink="">Go back</button>
+    <tr  *ngFor="let Message of contact">
+        <mat-card class="skill-card" *ngIf="isLogged">
+            <div class="skills-block">
+                <h3>{{Message.email}}</h3>
+                <p><strong>{{Message.message}}</strong></p>
+            </div>
+            <button mat-button (click)="delete(Message.id)" *ngIf="isLogged">Delete message</button>        
+        </mat-card>
+    </tr>
+</section>
+</div>
+&nbsp;

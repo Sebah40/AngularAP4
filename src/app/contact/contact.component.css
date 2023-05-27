@@ -1,0 +1,47 @@
+.container {
+  background-color: rgb(66, 66, 66);
+  padding: 30px 0;
+  text-align: center;
+  color: #fcbe11;
+}
+
+.skill-card {
+  margin: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: rgb(88, 88, 88);
+}
+
+#email {
+  width: 400px;
+}
+
+#message {
+  text-align: left;
+  vertical-align: top;
+  width: 300px;
+  height: 100px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: hidden;
+}
+
+tr {
+  display: block;
+  margin: auto;
+}
+
+table {
+  margin: auto;
+}
+
+#about h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+p {
+  color: #6cf788;
+}

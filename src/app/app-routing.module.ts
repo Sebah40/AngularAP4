@@ -12,6 +12,7 @@ import { EditAboutComponent } from './about/edit-about.component';
 import { EditMainComponent } from './main/edit-main.component';
 import { NewprojectsComponent } from './projects/newprojects.component';
 import { EditprojectsComponent } from './projects/editprojects.component';
+import { ListContactComponent } from './contact/list-contact.component';
 
 const routes: Routes = [
     {path:'', component: HomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
     {path: 'editMain/:id', component: EditMainComponent},
     {path: 'nuevoproyect', component: NewprojectsComponent},
     {path: 'editProyects/:id', component: EditprojectsComponent},
+    {path: 'listContacts', component: ListContactComponent}
 ];
 
 @NgModule({

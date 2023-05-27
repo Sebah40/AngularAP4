@@ -34,6 +34,8 @@ import { EditprojectsComponent } from './projects/editprojects.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ContactComponent } from './contact/contact.component';
+import { ListContactComponent } from './contact/list-contact.component';
 
 
 @NgModule({
@@ -58,6 +60,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     ProjectsComponent,
     NewprojectsComponent,
     EditprojectsComponent,
+    ContactComponent,
+    ListContactComponent,
   ],
   imports: [
     BrowserModule,

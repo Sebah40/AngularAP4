@@ -10,7 +10,6 @@ import { SkillService } from '../service/skill.service';
 })
 export class SkillsComponent implements OnInit {
   skill: Skill[] = [];
-  scrollVariable: number = 0;
 
   constructor(private skillS: SkillService, private tokenService: TokenService) {}
   isLogged =  false;
@@ -42,15 +41,5 @@ export class SkillsComponent implements OnInit {
         }
       )
     }
-  }
-  @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-    const scrollPosition = scrollTop + windowHeight / 4 ;
-    const maxScroll = documentHeight - windowHeight;
-    const scrollPercentage = (scrollPosition / maxScroll) * 110;
-    this.scrollVariable = Math.min(scrollPercentage, 100);
   }
 }
