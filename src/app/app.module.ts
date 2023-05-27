@@ -36,6 +36,7 @@ import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { ContactComponent } from './contact/contact.component';
 import { ListContactComponent } from './contact/list-contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { ListContactComponent } from './contact/list-contact.component';
     EditprojectsComponent,
     ContactComponent,
     ListContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
