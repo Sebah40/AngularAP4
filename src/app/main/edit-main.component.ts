@@ -16,6 +16,7 @@ export class EditMainComponent implements OnInit {
   
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
+    this.person.img = this.imageService.url
     this.personaS.getPersona().subscribe(data => {
     this.person = data;
     }, err => {
@@ -33,6 +34,8 @@ export class EditMainComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
+    this.person.img = this.imageService.url
+    console.log(this.person.img)
     this.personaS.update(this.person).subscribe(data => {
       this.router.navigate(['']);
     }, err => {alert("Error updating");
