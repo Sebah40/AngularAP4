@@ -16,7 +16,6 @@ export class EditMainComponent implements OnInit {
   
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.person.img = this.imageService.url
     this.personaS.getPersona().subscribe(data => {
     this.person = data;
     }, err => {
