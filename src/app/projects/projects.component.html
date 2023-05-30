@@ -6,7 +6,7 @@
         <mat-card class="education-mat">
             <div class="education-block">
                 <button mat-button routerLink="/editProyects/{{Project.id}}" *ngIf="isLogged">Edit Project</button>
-                <img src="{{Project.img}}" height="90">
+                <a href={{Project.url}}><img src="{{Project.img}}" height="90"></a>
                 <strong>
                     <h3>{{Project.nombre}}</h3>
                 </strong>

@@ -14,13 +14,14 @@ export class NewprojectsComponent implements OnInit {
   nombre: string = '';
   descripcion: string = '';
   img: string = '';
+  url: string = '';
 
   constructor(private proyectoS: ProyectsService, private router: Router) {}
   ngOnInit(): void {
     
   }
   onCreate(): void {
-    const expe = new Proyecto(this.nombre,this.descripcion,this.img, this.anio, this.habilidades);
+    const expe = new Proyecto(this.nombre,this.descripcion,this.img, this.anio, this.habilidades, this.url);
     this.proyectoS.save(expe).subscribe(data => {
       alert("Project saved successfully");
       this.router.navigate(['']);
