@@ -1,0 +1,14 @@
+&nbsp;
+<section id="skills">
+    <h2>Habilidades
+        <button mat-button routerLink="/newskill" *ngIf="isLogged">Nueva habilidad</button>
+    </h2>
+        <mat-card class="skill-card" *ngFor="let skill of skill">
+        <h3>{{skill.nombre}}</h3>
+        <div class="spinner-container">
+            <mat-spinner mode="determinate" value={{skill.porcentaje}} color="accent" strokeWidth="10"></mat-spinner>
+        </div>
+        <button mat-button (click)="delete(skill.id)" *ngIf="isLogged">Borrar habilidad</button>        
+    </mat-card>
+</section>
+&nbsp;

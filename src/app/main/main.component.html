@@ -1,0 +1,32 @@
+<body>
+<button mat-button routerLink="/editMain/{{persona.id}}" *ngIf="isLogged">Edit</button>
+  <div class="container" style="--background-image: url({{persona.img}});">
+        <mat-card class="secondary-card">
+            <mat-card-header>
+                <a href="https://github.com/Sebah40/AngularAP4"><img src="../../assets/img/GitHub.png"></a>
+              </mat-card-header>
+              <mat-card-content>
+                <h2>Repositorios GitHub</h2>
+                <h3>Proyectos</h3>
+              </mat-card-content>
+          </mat-card>
+        <mat-card class="main-card">            <mat-card-header>
+              <a href="../../assets/Currículum.pdf" download><img src="../../assets/img/Curriculum.png"></a>
+            </mat-card-header>
+            <mat-card-content>
+              <h1>Hola, soy {{persona.nombre}}</h1>
+              <h3>Full-Stack Developer</h3>
+            </mat-card-content>
+          </mat-card>
+          
+        <mat-card class="tertiary-card">
+            <mat-card-header>
+                <a href="#Contact"><img src="../../assets/img/Email.png"></a>
+              </mat-card-header>
+              <mat-card-content>
+                <h2>Contactame</h2>
+                <h3>Trabajemos juntos</h3>
+              </mat-card-content>
+        </mat-card>
+      </div>
+  </body>

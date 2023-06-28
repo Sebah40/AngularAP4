@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="div">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="form-group">
+                <label for="nombre">nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="proyecto.nombre"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">habilidades</label>
+                <input type="text" class="form-control" id="habilidades" name="habilidades"
+                    [(ngModel)]="proyecto.habilidades" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">año</label>
+                <input type="text" class="form-control" id="anio" name="anio" [(ngModel)]="proyecto.anio" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">descripción</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion"
+                    [(ngModel)]="proyecto.descripcion" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">imagen</label>
+                <input type="text" class="form-control" id="img" name="img" [(ngModel)]="proyecto.img" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">url</label>
+                <input type="text" class="form-control" id="url" name="url" [(ngModel)]="proyecto.url" required>
+            </div>
+
+            <button mat-button>Editar proyecto</button>
+        </form>
+    </div>
+</div>

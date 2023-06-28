@@ -1,0 +1,136 @@
+@media only screen and (min-width: 600px) {
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  width: 100%;
+  height: auto;
+  background-position: 85% 80%;
+  background-size : contain;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-card {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgb(88,88,88);
+}
+
+.secondary-card{
+  float: left;
+  width: 30%;
+  margin-right: 10px;
+  background-color: rgb(88,88,88);
+}
+
+.tertiary-card{
+  float: right;
+  width: 30%;
+  margin-left: 10px;
+  background-color: rgb(88,88,88);
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  filter: invert();
+}
+
+.content {
+  margin-left: 40px;
+  text-align: center;
+}
+
+h2{
+  color: #FCBE11;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #FCBE11;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #6cf788;
+}
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    display:flex;
+    margin:0 auto;
+  }
+  img {
+    max-width: 30%;
+    height: auto;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    filter: invert();
+  }
+
+  h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FCBE11;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FCBE11;
+  }
+  
+  h3 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #6cf788;
+  }
+  .secondary-card {
+    order: 2;
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .main-card {
+    order: 1;
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .tertiary-card {
+    order: 3;
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,7 @@
+<section id="about">
+    <div class="container">
+    <h2>Sobre mí</h2>
+    <button mat-button routerLink="/editAbout/{{persona.id}}" *ngIf="isLogged">Editar sobre mí</button>
+    <p>{{persona.descripcion}}</p>
+</div>
+</section>

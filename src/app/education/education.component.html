@@ -1,0 +1,19 @@
+<div class="container">
+<section id="education">
+  &nbsp;
+    <h2>Educación</h2>
+    <button mat-button routerLink="/nuevaedu" *ngIf="isLogged">Añadir educación</button>
+    <tr *ngFor="let Educacion of educacion">
+      <mat-card class="education-mat">          <div class="education-block">
+                <button mat-button routerLink="/editEdu/{{Educacion.id}}" *ngIf="isLogged">Editar educación</button>
+                <img src="{{Educacion.img}}" height="90">
+                <strong><h3>{{Educacion.nombre}}</h3></strong>
+                <p><strong>{{Educacion.descripcion}}</strong></p> {{Educacion.anio}}
+                <p>{{Educacion.habilidades}}</p>
+                <button mat-button (click)="delete(Educacion.id)" *ngIf="isLogged">Borrar educación</button>
+            </div>
+        </mat-card>
+    </tr>
+</section>
+</div>
+&nbsp;

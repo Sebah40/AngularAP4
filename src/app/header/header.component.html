@@ -1,0 +1,13 @@
+<header>
+    <div class="container">
+        <img src="../../assets/img/Logo header.png">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu">
+            <mat-icon>more_vert</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <a mat-menu-item (click)="login()" *ngIf="!isLogged">Iniciar sesión</a>
+            <a mat-menu-item (click)="onLogOut()" *ngIf="isLogged">Cerrar sesión</a>
+            <a mat-menu-item href="#Contact">Contactame</a>
+            <a mat-menu-item href="https://www.instagram.com/sebastian_haoys/">Instagram</a>
+          </mat-menu>
+    </div>
+</header>

@@ -1,0 +1,21 @@
+<section id="projects">
+    &nbsp;
+    <h2>Proyectos</h2>
+    <button mat-button routerLink="/nuevoproyect" *ngIf="isLogged">Añadir proyect</button>
+    <tr *ngFor="let Project of proyecto">
+        <mat-card class="education-mat">
+            <div class="education-block">
+                <button mat-button routerLink="/editProyects/{{Project.id}}" *ngIf="isLogged">Editar proyecto</button>
+                <a href={{Project.url}}><img src="{{Project.img}}" height="90"></a>
+                <strong>
+                    <h3>{{Project.nombre}}</h3>
+                </strong>
+                <p><strong>{{Project.descripcion}}</strong></p> {{Project.anio}}
+                <p>{{Project.habilidades}}</p>
+                <button mat-button (click)="delete(Project.id)" *ngIf="isLogged">Borrar proyecto</button>
+            </div>
+        </mat-card>
+    </tr>
+    &nbsp;
+</section>
+&nbsp;
